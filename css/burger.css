@@ -1,0 +1,248 @@
+nav {
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  position: absolute
+}
+
+nav .menus {
+  padding: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0e0e0e), to(#252525));
+  background: -o-linear-gradient(bottom, #0e0e0e, #252525);
+  background: linear-gradient(0deg, #0e0e0e, #252525);
+  position: fixed;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .3s cubic-bezier(1, .5, 0, 1);
+  transition: -webkit-transform .3s cubic-bezier(1, .5, 0, 1);
+  -o-transition: transform .3s cubic-bezier(1, .5, 0, 1);
+  transition: transform .3s cubic-bezier(1, .5, 0, 1);
+  transition: transform .3s cubic-bezier(1, .5, 0, 1), -webkit-transform .3s cubic-bezier(1, .5, 0, 1)
+}
+
+nav .menus.active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0)
+}
+
+nav .menus a {
+  list-style: none;
+  font-family: Merriweather_Black;
+  font-size: 16px;
+  color: #fff
+}
+
+nav .menus .link a:nth-child(odd) {
+  background-color: #212121
+}
+
+nav .menus .link a {
+  padding: 10px 0 10px 20px;
+  color: #fff;
+  display: block;
+  background: 0 0;
+  line-height: 1em;
+  font-size: 1.125em;
+  text-align: left;
+  text-decoration: none;
+  -webkit-transition: background .2s ease-in-out;
+  -o-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out
+}
+
+nav .menus .link {
+  margin: 20px auto
+}
+
+nav .menus .soc_burger {
+  margin: 0 0 30px 20px
+}
+
+nav .menus .soc_burger a img {
+  margin-right: 20px
+}
+
+.menu-toggle {
+  top: 14px;
+  z-index: 2;
+  right: 12px;
+  width: 22px;
+  height: 4px;
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed
+}
+
+.menu-toggle span {
+  height: 4px;
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  background: #fff;
+  border-radius: 2px;
+  white-space: nowrap;
+  -webkit-transition: background .3s ease-in-out;
+  -o-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out
+}
+
+.menu-toggle::after,
+.menu-toggle::before {
+  left: 0;
+  content: "";
+  width: 22px;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: width .2s ease-in-out, background .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  transition: width .2s ease-in-out, background .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -o-transition: width .2s ease-in-out, background .2s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out;
+  transition: width .2s ease-in-out, background .2s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out;
+  transition: width .2s ease-in-out, background .2s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out, -webkit-transform .2s ease-in-out
+}
+
+.menu-toggle::before {
+  top: 0
+}
+
+.menu-toggle::after {
+  bottom: 0
+}
+
+.menu-toggle.menu-open span {
+  background: rgba(255, 255, 255, 0)
+}
+
+.menu-toggle.menu-open::before {
+  top: 8px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+.menu-toggle.menu-open::after {
+  bottom: 8px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.menu-toggle.menu-open::after,
+.menu-toggle.menu-open::before {
+  width: 26px;
+  background: #fff
+}
+
+.menu-toggle.menu-open:active span,
+.menu-toggle.menu-open:focus span,
+.menu-toggle.menu-open:hover span {
+  background: rgba(255, 255, 255, 0)
+}
+
+.menu-toggle.menu-open:active::before,
+.menu-toggle.menu-open:focus::before,
+.menu-toggle.menu-open:hover::before {
+  top: 8px;
+  left: -3px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+.menu-toggle.menu-open:active::after,
+.menu-toggle.menu-open:focus::after,
+.menu-toggle.menu-open:hover::after {
+  left: 9px;
+  bottom: 8px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.menu-toggle.menu-open:active::after,
+.menu-toggle.menu-open:active::before,
+.menu-toggle.menu-open:focus::after,
+.menu-toggle.menu-open:focus::before,
+.menu-toggle.menu-open:hover::after,
+.menu-toggle.menu-open:hover::before {
+  width: 18px
+}
+
+.menu-toggle:active span,
+.menu-toggle:focus span,
+.menu-toggle:hover span {
+  background: rgba(255, 255, 255, 0)
+}
+
+.menu-toggle:active::before,
+.menu-toggle:focus::before,
+.menu-toggle:hover::before {
+  top: 8px;
+  left: -3px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.menu-toggle:active::after,
+.menu-toggle:focus::after,
+.menu-toggle:hover::after {
+  left: 9px;
+  bottom: 8px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+.menu-toggle:active::after,
+.menu-toggle:active::before,
+.menu-toggle:focus::after,
+.menu-toggle:focus::before,
+.menu-toggle:hover::after,
+.menu-toggle:hover::before {
+  width: 18px
+}
+
+@font-face {
+  font-family: Merriweather_Black;
+  src: url(../fonts/Merriweather-Black.ttf)
+}
+
+@font-face {
+  font-family: PTSansCaption_Bold;
+  src: url(../fonts/PTSansCaption-Bold.ttf)
+}
+
+@font-face {
+  font-family: PTSansCaption_Regular;
+  src: url(../fonts/PTSansCaption-Regular.ttf)
+}
+
+@media screen and (max-width:472PX) {
+  nav .menus .logo_burger .con .telephone span {
+    margin-right: 20px
+  }
+}
+
+@media screen and (max-width:347PX) {
+  nav .menus .logo_burger .con .telephone span {
+    margin-right: 5px
+  }
+
+  nav .menus .logo_burger img {
+    margin: 20px 0 0 15px
+  }
+}
